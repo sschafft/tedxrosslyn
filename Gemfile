@@ -8,6 +8,7 @@ gem 'rails', '3.2.12'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
+
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
 
@@ -34,11 +35,6 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
-# Use PG for production
-group :production do
-  gem 'pg'
-end
-
 # Only install sqlite for dev and test
 group :development, :test do
   gem 'sqlite3', :require => 'sqlite3'
@@ -50,6 +46,7 @@ gem 'paperclip'
 
 # Adds Google Analytics
 gem 'google-analytics-rails'
+
 
 
 
