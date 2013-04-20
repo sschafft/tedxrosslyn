@@ -1,4 +1,7 @@
 Tedxrosslyn::Application.routes.draw do
+  resources :talks
+
+
   resources :speakers
 
   get "home/index"

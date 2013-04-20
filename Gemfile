@@ -18,12 +18,6 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
-
-  # Foundation 4.0
-  gem 'zurb-foundation', '~> 4.0.0'
-  gem 'turbo-sprockets-rails3'
-  gem 'modernizr-rails', '~> 2.6.2'
-  gem 'underscore-rails'
 end
 
 gem 'jquery-rails'

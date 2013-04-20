@@ -1,4 +1,6 @@
 class SpeakersController < ApplicationController
+  http_basic_authenticate_with :name => "tedx", :password => "2030"
+
   # GET /speakers
   # GET /speakers.json
   def index
