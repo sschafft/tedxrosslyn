@@ -13,3 +13,8 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+nico/assets/css/base.less
+nico/assets/css/mixins.less
+nico/assets/css/reset.less
+nico/assets/css/responsive.less
+nico/assets/css/style.less

@@ -43,7 +43,6 @@
 
     <!-- CSS  -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <noscript><style>#loading{display:none;}</style></noscript>
 <style>
     #slides {
   display: none;
@@ -51,14 +50,19 @@
 </style>
     <!-- jQuery -->
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="assets/javascript/jquery.slides.min.js"></script>
+    <script type="text/javascript" src="../app/assets/javascripts/jquery_slides.min.js"></script>
+    <script type="text/javascript" src="../app/assets/javascripts/scripts.js"></script>
 
 </head>
 <body>
-
+<div id="fb-root"></div>
     <header>
         <!-- TEDx Rosslyn Logo and link to homepage -->
-        <a href="/"><img src="assets/images/logo.png" width="240px" height="65px" /></a>
+        <a href="/"><img src="../app/assets/images/logo.png" width="240px" height="65px" /></a>
+        <div id="share">
+            <div class="twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.tedxrosslyn.com">Tweet</a></div>
+            <div class="fb-like" data-href="http://www.tedxrosslyn.com" data-send="false" data-layout="button_count" data-width="90" data-show-faces="false"></div>
+        </div>
     </header>
 
     <div id="mainlinks">
@@ -72,11 +76,11 @@
     <!-- Cover Image -->
     <div id="container">
         <div id="slides">
-            <img src="assets/images/example-slide-1.jpg" />
-            <img src="assets/images/example-slide-2.jpg" />
-            <img src="assets/images/example-slide-3.jpg" />
-            <img src="assets/images/example-slide-4.jpg" />
-            <img src="assets/images/test.jpg" />
+            <img src="../app/assets/images/example-slide-1.jpg" />
+            <img src="../app/assets/images/example-slide-2.jpg" />
+            <img src="../app/assets/images/example-slide-3.jpg" />
+            <img src="../app/assets/images/example-slide-4.jpg" />
+            <img src="../app/assets/images/test.jpg" />
         </div>
         <div id="center">
             <h1>Imagining the Future</h1>
@@ -86,17 +90,17 @@
 
     <div class="clear"></div>
     <section id="main">
-        <div id="" class="tab">
-            <h2>EVENT</h2>
+        <div class="tab">
+            <h2 class="">ABOUT</h2>
         </div>
-        <div id="" class="tab">
-            <h2>SPEAKERS</h2>
+        <div class="tab">
+            <h2 class="">EVENT</h2>
         </div>
-        <div id="" class="tab">
-            <h2>PARTNERS</h2>
+        <div class="tab">
+            <h2 class="">SPEAKERS</h2>
         </div>
-        <div id="" class="tab">
-            <h2>ABOUT</h2>
+        <div class="tab">
+            <h2 class="">PARTNERS</h2>
         </div>
     </section>
 
@@ -114,5 +118,13 @@
       });
     });
   </script>
+  <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 </body>
 </html>
