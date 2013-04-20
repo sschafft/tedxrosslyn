@@ -240,6 +240,9 @@ a {
   -o-transition: all 300ms ease-in-out;
   -ms-transition: all 300ms ease-in-out;
 }
+.clear {
+  clear: both;
+}
 /* Basic Styles
 =====================================*/
 body {
@@ -319,15 +322,24 @@ header img:hover {
   color: #fafafa;
   padding: 5px 8px;
   margin: 10px 0;
+  transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
 }
 #main .tab h2 {
   line-height: 0;
+  text-transform: uppercase;
+}
+#main .tab:hover {
+  background: #d21f00;
 }
 /* PAGES *//* Responsive Styles
 =====================================*/
 /* Setup For Screens 320px to 768px
 =====================================*/
-@media only screen and (min-width: 320px) and (max-width: 768px) {
+@media only screen and (min-width: 320px) and (max-width: 767px) {
   header {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -347,6 +359,9 @@ header img:hover {
     width: 100%;
     text-align: center;
   }
+  #container {
+    max-height: 200px;
+  }
   #container #center h1 {
     font-size: 270%;
     opacity: 1;
@@ -358,6 +373,9 @@ header img:hover {
   }
   #container #center h2 {
     font-size: 150%;
+  }
+  #main {
+    margin-bottom: 50px;
   }
 }
 /* Setup For Screens 768px to 1024px
@@ -373,22 +391,57 @@ header img:hover {
     right: 50px;
     text-align: center;
   }
+  #container {
+    max-height: 600px;
+    overflow: hidden;
+  }
+  #main {
+    margin-left: auto;
+    margin-right: auto;
+    width: 768px;
+    padding: 0;
+  }
   #main .tab {
-    width: 178px;
+    width: 164px;
+    float: left;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  #main .tab h2 {
+    font-size: 80%;
   }
 }
 /* Setup For Screens 1024px to 1200px
 =====================================*/
-@media only screen and (min-width: 1024px) and (max-width: 1200px) {
-  
+@media only screen and (min-width: 1024px) {
+  #container {
+    max-height: 500px;
+    overflow: hidden;
+  }
+  #main {
+    width: 1024px;
+  }
+  #main .tab {
+    width: 230px;
+  }
 }
 /* Setup For Screens 1200px to 1600px
 =====================================*/
-@media only screen and (min-width: 1200px) and (max-width: 1600px) {
-  
+@media only screen and (min-width: 1200px) {
+  #main {
+    width: 1200px;
+  }
+  #main .tab {
+    width: 270px;
+  }
 }
 /* Setup For Screens 1600px and up
 =====================================*/
 @media only screen and (min-width: 1600px) {
-  
+  #main {
+    width: 1600px;
+  }
+  #main .tab {
+    width: 370px;
+  }
 }

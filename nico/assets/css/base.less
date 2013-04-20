@@ -81,9 +81,15 @@ header {
         color: @white;
         padding: 5px 8px;
         margin: 10px 0;
+        .transition;
 
         h2 {
             line-height: 0;
+            text-transform: uppercase;
+        }
+
+        &:hover {
+            background: darken(@red, 10%);
         }
     }
 }
