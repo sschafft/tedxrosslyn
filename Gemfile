@@ -40,6 +40,11 @@ group :development, :test do
   gem 'sqlite3', :require => 'sqlite3'
 end
 
+# Use PG for production
+group :production do
+  gem 'pg'
+end
+
 # Installs mercury
 gem 'mercury-rails'
 gem 'paperclip'
