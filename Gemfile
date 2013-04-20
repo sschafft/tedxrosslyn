@@ -15,6 +15,10 @@ group :assets do
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
+  # Foundation
+  gem 'zurb-foundation', '~> 4.0.0'
+  gem 'modernizr-rails', '~> 2.6.2'
+
   gem 'uglifier', '>= 1.0.3'
 end
 
@@ -38,6 +42,11 @@ gem 'jquery-rails'
 # Only install sqlite for dev and test
 group :development, :test do
   gem 'sqlite3', :require => 'sqlite3'
+end
+
+# Use PG for production
+group :production do
+  gem 'pg'
 end
 
 # Installs mercury
