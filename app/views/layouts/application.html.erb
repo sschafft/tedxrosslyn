@@ -42,15 +42,30 @@
     <!--[if IE]><meta content="IE=8" http-equiv="X-UA-Compatible"/><![endif]-->
     <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif] -->
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= javascript_include_tag "jquery_slides" %>
+
   <%= csrf_meta_tags %>
 
   <%= analytics_init if Rails.env.production? %>
 </head>
 <body>
+
+    <header>
+        <!-- TEDx Rosslyn Logo and link to homepage -->
+        <%= link_to image_tag("logo.png", :size => "240x65"), root_path %>
+    </header>
+
+    <div id="mainlinks">
+        <!-- Trigger GoogleMaps info to show up along with all other contact info -->
+        <a href="#" class="blockbtn">Location</a>
+
+        <!-- Hidden until day of event, then link to stream -->
+        <a href="#" class="blockbtn">Livestream</a>
+    </div>
 
 <%= yield %>
 
