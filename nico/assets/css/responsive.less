@@ -1,0 +1,91 @@
+/* Setup For Screens 320px to 768px
+=====================================*/
+@media only screen
+and (min-width : 320px)
+and (max-width : 768px) {
+
+    header {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        background: @white;
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    #mainlinks {
+        position: fixed;
+        bottom:0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background: @gray;
+        width: 100%;
+        text-align: center;
+    }
+
+    #container {
+
+        #center {
+
+            h1 {
+                font-size: 270%;
+                .opacity(1.0);
+            }
+            h2 {
+                font-size: 150%;
+            }
+        }
+    }
+}
+
+
+/* Setup For Screens 768px to 1024px
+=====================================*/
+@media only screen
+and (min-width : 768px){
+    header {
+        padding: 30px 50px;
+        background: @white;
+    }
+
+    #mainlinks {
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        text-align: center;
+    }
+
+    #main {
+
+        .tab {
+            width: 178px;
+        }
+    }
+
+}
+
+/* Setup For Screens 1024px to 1200px
+=====================================*/
+@media only screen
+and (min-width : 1024px)
+and (max-width : 1200px) {
+
+}
+
+/* Setup For Screens 1200px to 1600px
+=====================================*/
+@media only screen
+and (min-width : 1200px)
+and (max-width : 1600px) {
+
+}
+
+/* Setup For Screens 1600px and up
+=====================================*/
+@media only screen
+and (min-width : 1600px) {
+
+}
