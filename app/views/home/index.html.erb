@@ -1,3 +1,57 @@
-<div class="panel">
-	<h1> test </h1> 
-</div> 
+ 	<header>
+        <!-- TEDx Rosslyn Logo and link to homepage -->
+        <%= link_to image_tag("logo.png", :size => "240x65"), root_path %>
+    </header>
+
+    <div id="mainlinks">
+        <!-- Trigger GoogleMaps info to show up along with all other contact info -->
+        <a href="#" class="blockbtn">Location</a>
+
+        <!-- Hidden until day of event, then link to stream -->
+        <a href="#" class="blockbtn">Livestream</a>
+    </div>
+
+    <!-- Cover Image -->
+    <div id="container">
+        <div id="slides">
+            <%= image_tag "example-slide-1.jpg" %>
+            <%= image_tag "example-slide-2.jpg" %>
+            <%= image_tag "example-slide-3.jpg" %>
+            <%= image_tag "example-slide-4.jpg" %>
+            <%= image_tag "test.jpg" %>
+        </div>
+        <div id="center">
+            <h1>Imagining the Future</h1>
+            <h2>June 9, 2013</h2>
+        </div>
+    </div>
+
+    <section id="main">
+        <div id="" class="tab">
+            <h2>EVENT</h2>
+        </div>
+        <div id="" class="tab">
+            <h2>SPEAKERS</h2>
+        </div>
+        <div id="" class="tab">
+            <h2>PARTNERS</h2>
+        </div>
+        <div id="" class="tab">
+            <h2>ABOUT</h2>
+        </div>
+    </section>
+
+<script>
+    $(function() {
+      $('#slides').slidesjs({
+        width: 940,
+        height: 528,
+        play: {
+          active: false,
+          auto: true,
+          interval: 4000,
+          swap: true
+        }
+      });
+    });
+  </script>
