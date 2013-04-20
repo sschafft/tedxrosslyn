@@ -18,6 +18,12 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+
+  # Foundation 4.0
+  gem 'zurb-foundation', '~> 4.0.0'
+  gem 'turbo-sprockets-rails3'
+  gem 'modernizr-rails', '~> 2.6.2'
+  gem 'underscore-rails'
 end
 
 gem 'jquery-rails'
@@ -36,3 +42,24 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+# Use PG for production
+group :production do
+  gem 'pg'
+end
+
+# Only install sqlite for dev and test
+group :development, :test do
+  gem 'sqlite3', :require => 'sqlite3'
+end
+
+# Installs mercury
+gem 'mercury-rails'
+gem 'paperclip'
+
+
+# Adds Google Analytics
+gem 'google-analytics-rails'
+
+
+

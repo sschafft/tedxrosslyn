@@ -4,6 +4,9 @@ Tedxrosslyn::Application.configure do
   # Code is not reloaded between requests
   config.cache_classes = true
 
+  # Google Analytics
+  GA.tracker = "UA-40045413-1"
+
   # Full error reports are disabled and caching is turned on
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
