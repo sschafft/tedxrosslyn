@@ -259,7 +259,7 @@ a {
 /* Basic Styles
 =====================================*/
 body {
-  background: #ff2b06;
+  background: #fafafa;
 }
 /* HEADER CONTENT */
 header img {
@@ -276,6 +276,16 @@ header img:hover {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
   filter: alpha(opacity=50);
   *zoom: 1;
+}
+#share {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+#share .twitter,
+#share .fb-like {
+  display: inline-block;
+  font-size: 1px;
 }
 /* MAIN LINKS */
 .blockbtn {
@@ -328,35 +338,35 @@ header img:hover {
 }
 /* Main Content */
 #main {
-  padding: 20px;
+  padding: 20px 0 0 0;
+  background: #ff2b06;
 }
 #main .tab {
-  background: #ff2b06;
-  color: #fafafa;
-  padding: 5px 8px;
-  margin: 10px 0;
+  padding: 10px 20px;
+  margin: 0px 0;
   transition: all 300ms ease-in-out;
   -moz-transition: all 300ms ease-in-out;
   -webkit-transition: all 300ms ease-in-out;
   -o-transition: all 300ms ease-in-out;
   -ms-transition: all 300ms ease-in-out;
+  background: #ff2b06;
 }
 #main .tab h2 {
   line-height: 0;
   text-transform: uppercase;
+  color: #fafafa;
 }
 #main .tab:hover {
   background: #d21f00;
 }
-/* PAGES */
-/* Responsive Styles
-
+/* PAGES *//* Responsive Styles
+=====================================*/
 /* Setup For Screens 320px to 768px
 =====================================*/
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   header {
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 0px;
     background: #fafafa;
   }
   header img {
@@ -369,12 +379,12 @@ header img:hover {
     bottom: 0;
     padding-top: 10px;
     padding-bottom: 10px;
-    background: #cccccc;
+    background: #222222;
     width: 100%;
     text-align: center;
   }
   #container {
-    max-height: 200px;
+    width: auto;
   }
   #container #center h1 {
     font-size: 270%;
@@ -389,7 +399,28 @@ header img:hover {
     font-size: 150%;
   }
   #main {
+    padding-top: 0;
     margin-bottom: 50px;
+  }
+  #main h2:after {
+    position: relative;
+    top: 0;
+    right: 20px
+                  width: 0;
+    height: 0;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+    border-left: 60px solid black;
+    z-index: 100;
+  }
+  #share {
+    position: relative;
+    text-align: center;
+    margin: 30px 0 40px 0;
+    left: 0;
+  }
+  #share div {
+    display: inline-block;
   }
 }
 /* Setup For Screens 768px to 1024px
@@ -406,8 +437,9 @@ header img:hover {
     text-align: center;
   }
   #container {
-    max-height: 600px;
+    max-height: 500px;
     overflow: hidden;
+    margin-bottom: 20px;
   }
   #main {
     margin-left: auto;
@@ -416,27 +448,23 @@ header img:hover {
     padding: 0;
   }
   #main .tab {
-    width: 164px;
+    width: 142px;
     float: left;
     margin-right: 5px;
     margin-left: 5px;
   }
   #main .tab h2 {
-    font-size: 80%;
+    font-size: 90%;
   }
 }
 /* Setup For Screens 1024px to 1200px
 =====================================*/
 @media only screen and (min-width: 1024px) {
-  #container {
-    max-height: 500px;
-    overflow: hidden;
-  }
   #main {
     width: 1024px;
   }
   #main .tab {
-    width: 230px;
+    width: 206px;
   }
 }
 /* Setup For Screens 1200px to 1600px
@@ -446,7 +474,7 @@ header img:hover {
     width: 1200px;
   }
   #main .tab {
-    width: 270px;
+    width: 250px;
   }
 }
 /* Setup For Screens 1600px and up
@@ -456,6 +484,6 @@ header img:hover {
     width: 1600px;
   }
   #main .tab {
-    width: 370px;
+    width: 350px;
   }
 }
