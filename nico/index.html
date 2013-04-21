@@ -5,10 +5,15 @@
     <!-- // Site Info
     ====================================
 
-    Version:    0.0.0
+    Version:    0.1.5
 
-    Launch:     Jan 17, 2012
-    Updated:    Jan 19, 2012
+    Start:      Apr 20, 2013
+    Launch:     Soon
+    Updated:    Never
+
+    Authors:    Scott Schaffter, Nicholas Kingston
+    URI:        http://www.nickingston.com
+    URI:        http://www.scottsurl.com
 
     ====================================
     // -->
@@ -17,12 +22,13 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="keywords" content="" />
-    <meta name="author" content="Nicholas A. Kingston">
+    <meta name="author" content="Scott Schaffter, Nicholas A. Kingston">
     <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1">
     <meta name="google-site-verification" content="" />
     <meta name="robots" content="noindex, nofollow">
 
     <!-- Social Metadata  -->
+    <!-- SCOTT: Include if necessary  -->
     <meta property="fb:admins" content="" />
     <meta property="og:title" content=""/>
     <meta property="og:description" content=""/>
@@ -43,88 +49,219 @@
 
     <!-- CSS  -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-<style>
-    #slides {
-  display: none;
-  }
-</style>
-    <!-- jQuery -->
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="../app/assets/javascripts/jquery_slides.min.js"></script>
-    <script type="text/javascript" src="../app/assets/javascripts/scripts.js"></script>
 
 </head>
 <body>
-<div id="fb-root"></div>
+    <div id="apply">
+        <div class="row">
+            <div class="large-12 columns">
+                <h1>Apply</h1>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="large-6 columns">
+                <h3>Content</h3>
+                <p>At TEDxRosslyn, we combine world-class speakers with a world-class audience.</p>
+                <p>Join us in the audience by filling in the form. Once approved, you will receive an e-mail with a personalized link to purchase your entrance ticket online.</p>
+                <p>Due to the limited number of seats available, not all applications will be approved.</p>
+
+            </div>
+            <div class="large-6 columns">
+                <h3>Form</h3>
+                <label>Name</label>
+                <input type="text">
+                <small class="error">Don't forget to put your name!</small>
+                <label>Email Address</label>
+                <input type="email">
+                <small class="error">We need a real email to send you your ticket!</small>
+                <button type="submit" class="right button radius">Submit</button>
+            </div>
+        </div>
+        <a href="javascript:void(0);" class="apply-toggle closer">x</a>
+    </div>
+    <div id="location">
+        <div id="map_canvas"></div>
+        <a href="javascript:void(0);" class="location-toggle closer">x</a>
+        <div id="address">
+            <div class="row">
+                <div class="large-12 columns">
+                    <h6>1400 14th St N, Arlington, VA, 22209</h6>
+                </div>
+            </div>
+        </div>
+    </div>
     <header>
         <!-- TEDx Rosslyn Logo and link to homepage -->
-        <a href="/"><img src="../app/assets/images/logo.png" width="240px" height="65px" /></a>
-        <div id="share">
-            <div class="twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.tedxrosslyn.com">Tweet</a></div>
-            <div class="fb-like" data-href="http://www.tedxrosslyn.com" data-send="false" data-layout="button_count" data-width="90" data-show-faces="false"></div>
+        <a href="/"><img src="assets/images/logo.png" width="240px" height="65px" /></a>
+        <div id="mainlinks">
+            <a href="#location" class="location-toggle on button radius map">Location</a>
+            <a href="#apply" class="apply-toggle button radius">Apply</a>
         </div>
     </header>
 
-    <div id="mainlinks">
-        <!-- Trigger GoogleMaps info to show up along with all other contact info -->
-        <a href="#" class="blockbtn">Location</a>
-
-        <!-- Hidden until day of event, then link to stream -->
-        <a href="#" class="blockbtn">Livestream</a>
-    </div>
 
     <!-- Cover Image -->
     <div id="container">
         <div id="slides">
-            <img src="../app/assets/images/example-slide-1.jpg" />
-            <img src="../app/assets/images/example-slide-2.jpg" />
-            <img src="../app/assets/images/example-slide-3.jpg" />
-            <img src="../app/assets/images/example-slide-4.jpg" />
-            <img src="../app/assets/images/test.jpg" />
+            <img src="assets/images/example-slide-1.jpg" />
+            <img src="assets/images/example-slide-2.jpg" />
+            <img src="assets/images/example-slide-3.jpg" />
+            <img src="assets/images/example-slide-4.jpg" />
+            <img src="assets/images/test.jpg" />
         </div>
         <div id="center">
             <h1>Imagining the Future</h1>
             <h2>June 9, 2013</h2>
         </div>
     </div>
-
-    <div class="clear"></div>
-    <section id="main">
-        <div class="tab">
-            <h2 class="">ABOUT</h2>
-        </div>
-        <div class="tab">
-            <h2 class="">EVENT</h2>
-        </div>
-        <div class="tab">
-            <h2 class="">SPEAKERS</h2>
-        </div>
-        <div class="tab">
-            <h2 class="">PARTNERS</h2>
+    <section id="about">
+        <div class="row">
+            <div class="small-12 columns">
+                <h2 class="text-center">About TED</h2>
+                <p>TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in California 25 years ago, TED has grown to support those world-changing ideas with multiple initiatives. The annual TED Conference invites the world's leading thinkers and doers to speak for 18 minutes. Their talks are then made available, free, at TED.com. TED speakers have included Bill Gates, Al Gore, Jane Goodall, Elizabeth Gilbert, Sir Richard Branson, Nandan Nilekani,Philippe Starck, Ngozi Okonjo-Iweala, Isabel Allende and UK Prime Minister Gordon Brown. The annual TED Conference takes place in Long Beach, California, with simulcast in Palm Springs; TEDGlobal is held each year in Oxford, UK. TED's media initiatives include TED.com, where new TEDTalks are posted daily, and the Open Translation Project, which provides subtitles and interactive transcripts as well as the ability for any TEDTalk to be translated by volunteers worldwide.</p>
+                <p>TED has established the annual TED Prize, where exceptional individuals with a wish to change the world are given the opportunity to put their wishes into action; TEDx, which offers individuals or groups a way to host local, self-organized events around the world, and the TEDFellows program, helping world-changing innovators from around the globe to become part of the TED community and, with its help, amplify the impact of their remarkable projects and activities.</p>
+            </div>
+            <hr>
         </div>
     </section>
+    <section id="event">
+        <div class="row">
+            <h2 class="text-center">TEDxRosslyn</h2>
+            <div class="large-6 columns">
+                <p>TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in California 25 years ago, TED has grown to support those world-changing ideas with multiple initiatives. The annual TED Conference invites the world's leading thinkers and doers to speak for 18 minutes. Their talks are then made available, free, at TED.com. TED speakers have included Bill Gates, Al Gore, Jane Goodall, Elizabeth Gilbert, Sir Richard Branson, Nandan Nilekani,Philippe Starck, Ngozi Okonjo-Iweala, Isabel Allende and UK Prime Minister Gordon Brown. The annual TED Conference takes place in Long Beach, California, with simulcast in Palm Springs; TEDGlobal is held each year in Oxford, UK. TED's media initiatives include TED.com, where new TEDTalks are posted daily, and the Open Translation Project, which provides subtitles and interactive transcripts as well as the ability for any TEDTalk to be translated by volunteers worldwide.</p>
+                <p>TED has established the annual TED Prize, where exceptional individuals with a wish to change the world are given the opportunity to put their wishes into action; TEDx, which offers individuals or groups a way to host local, self-organized events around the world, and the TEDFellows program, helping world-changing innovators from around the globe to become part of the TED community and, with its help, amplify the impact of their remarkable projects and activities.</p>
+            </div>
+            <div class="large-6 columns">
+                <p>TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in California 25 years ago, TED has grown to support those world-changing ideas with multiple initiatives. The annual TED Conference invites the world's leading thinkers and doers to speak for 18 minutes. Their talks are then made available, free, at TED.com. TED speakers have included Bill Gates, Al Gore, Jane Goodall, Elizabeth Gilbert, Sir Richard Branson, Nandan Nilekani,Philippe Starck, Ngozi Okonjo-Iweala, Isabel Allende and UK Prime Minister Gordon Brown. The annual TED Conference takes place in Long Beach, California, with simulcast in Palm Springs; TEDGlobal is held each year in Oxford, UK. TED's media initiatives include TED.com, where new TEDTalks are posted daily, and the Open Translation Project, which provides subtitles and interactive transcripts as well as the ability for any TEDTalk to be translated by volunteers worldwide.</p>
+                <p>TED has established the annual TED Prize, where exceptional individuals with a wish to change the world are given the opportunity to put their wishes into action; TEDx, which offers individuals or groups a way to host local, self-organized events around the world, and the TEDFellows program, helping world-changing innovators from around the globe to become part of the TED community and, with its help, amplify the impact of their remarkable projects and activities.</p>
+            </div>
+            <hr>
+        </div>
+    </section>
+    <section id="speakers">
+        <div class="row">
+            <h2 class="text-center">Speakers</h2>
+            <div class="large-3 columns">
+                <div class="speakerimg"></div>
+                <h6>Firstname Lastname</h6>
+                <p>Speaker Type</p>
+                <small>TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in California 25 years ago, TED has grown to support those world-changing ideas with multiple initiatives. The annual TED Conference invites the world's leading thinkers and doers to speak for 18 minutes.</small>
+            </div>
+            <div class="large-3 columns">
+                <div class="speakerimg"></div>
+                <h6>Firstname Lastname</h6>
+                <p>Speaker Type</p>
+                <small>TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in California 25 years ago, TED has grown to support those world-changing ideas with multiple initiatives. The annual TED Conference invites the world's leading thinkers and doers to speak for 18 minutes.</small>
+            </div>
+            <div class="large-3 columns">
+                <div class="speakerimg"></div>
+                <h6>Firstname Lastname</h6>
+                <p>Speaker Type</p>
+                <small>TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in California 25 years ago, TED has grown to support those world-changing ideas with multiple initiatives. The annual TED Conference invites the world's leading thinkers and doers to speak for 18 minutes.</small>
+            </div>
+            <div class="large-3 columns">
+                <div class="speakerimg"></div>
+                <h6>Firstname Lastname</h6>
+                <p>Speaker Type</p>
+                <small>TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in California 25 years ago, TED has grown to support those world-changing ideas with multiple initiatives. The annual TED Conference invites the world's leading thinkers and doers to speak for 18 minutes.</small>
+            </div>
+            <hr class="divider">
+            <div class="large-3 columns">
+                <div class="speakerimg"></div>
+                <h6>Firstname Lastname</h6>
+                <p>Speaker Type</p>
+                <small>TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in California 25 years ago, TED has grown to support those world-changing ideas with multiple initiatives. The annual TED Conference invites the world's leading thinkers and doers to speak for 18 minutes.</small>
+            </div>
+            <div class="large-3 columns">
+                <div class="speakerimg"></div>
+                <h6>Firstname Lastname</h6>
+                <p>Speaker Type</p>
+                <small>TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in California 25 years ago, TED has grown to support those world-changing ideas with multiple initiatives. The annual TED Conference invites the world's leading thinkers and doers to speak for 18 minutes.</small>
+            </div>
+            <div class="large-3 columns">
+                <div class="speakerimg"></div>
+                <h6>Firstname Lastname</h6>
+                <p>Speaker Type</p>
+                <small>TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in California 25 years ago, TED has grown to support those world-changing ideas with multiple initiatives. The annual TED Conference invites the world's leading thinkers and doers to speak for 18 minutes.</small>
+            </div>
+            <div class="large-3 columns">
+                <div class="speakerimg"></div>
+                <h6>Firstname Lastname</h6>
+                <p>Speaker Type</p>
+                <small>TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in California 25 years ago, TED has grown to support those world-changing ideas with multiple initiatives. The annual TED Conference invites the world's leading thinkers and doers to speak for 18 minutes.</small>
+            </div>
+            <hr>
+        </div>
+    </section>
+    <section id="partners">
 
-<script>
-    $(function() {
-      $('#slides').slidesjs({
-        width: 940,
-        height: 528,
-        play: {
-          active: false,
-          auto: true,
-          interval: 4000,
-          swap: true
-        }
-      });
-    });
-  </script>
-  <script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        <div class="row">
+            <div class="large-12 columns">
+                <h2 class="text-center">Partners</h2>
+                <p>TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in California 25 years ago, TED has grown to support those world-changing ideas with multiple initiatives. The annual TED Conference invites the world's leading thinkers and doers to speak for 18 minutes.</p>
+                <h4>Gold Partners</h4>
+            </div>
+            <div class="large-4 columns">
+                <div class="partnerimg"></div>
+                <a href="#">www.someurl.com</a>
+            </div>
+            <div class="large-4 columns">
+                <div class="partnerimg"></div>
+                <a href="#">www.someurl.com</a>
+            </div>
+            <div class="large-4 columns">
+                <div class="partnerimg"></div>
+                <a href="#">www.someurl.com</a>
+            </div>
+            <hr class="divider">
+            <div class="large-12 columns">
+                <h4>Silver Partners</h4>
+            </div>
+            <div class="large-4 columns">
+                <div class="partnerimg"></div>
+                <a href="#">www.someurl.com</a>
+            </div>
+            <div class="large-4 columns">
+                <div class="partnerimg"></div>
+                <a href="#">www.someurl.com</a>
+            </div>
+            <div class="large-4 columns">
+                <div class="partnerimg"></div>
+                <a href="#">www.someurl.com</a>
+            </div>
+            <hr class="divider">
+            <div class="large-12 columns">
+                <h4>Bronze Partners</h4>
+            </div>
+            <div class="large-4 columns">
+                <div class="partnerimg"></div>
+                <a href="#">www.someurl.com</a>
+            </div>
+            <div class="large-4 columns">
+                <div class="partnerimg"></div>
+                <a href="#">www.someurl.com</a>
+            </div>
+            <div class="large-4 columns">
+                <div class="partnerimg"></div>
+                <a href="#">www.someurl.com</a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="row">
+            <div class="large-12 columns">
+                <p class="text-center">Copyright &copy; Scott &amp; Nicholas (both Awesome)...!</p>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <!-- jQuery -->
+    <!-- SCOTT: They must load in this order... it will break if not -->
+    <script type="text/javascript" src="assets/javascripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?&sensor=false"></script>
+    <script type="text/javascript" src="assets/javascripts/map.js"></script>
+    <script type="text/javascript" src="assets/javascripts/jquery_slides.min.js"></script>
+    <script type="text/javascript" src="assets/javascripts/scripts.js"></script>
 </body>
 </html>
