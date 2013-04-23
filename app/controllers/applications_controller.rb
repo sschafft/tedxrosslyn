@@ -1,4 +1,6 @@
 class ApplicationsController < ApplicationController
+  http_basic_authenticate_with :name => "tedx", :password => "2030"
+  layout "default"
   # GET /applications
   # GET /applications.json
   def index

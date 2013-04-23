@@ -1,4 +1,7 @@
 class PartnersController < ApplicationController
+  http_basic_authenticate_with :name => "tedx", :password => "2030"
+  layout "default"
+
   # GET /partners
   # GET /partners.json
   def index
