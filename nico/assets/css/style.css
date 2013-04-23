@@ -1362,7 +1362,7 @@ blockquote p {
     background: transparent !important;
     color: black !important;
     /* Black prints faster: h5bp.com/s */
-  
+
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -5342,6 +5342,9 @@ footer p {
     border-bottom: 60px solid transparent;
     border-left: 60px solid black;
     z-index: 100;
+  }
+  footer {
+      margin-bottom: 100px;
   }
   #share {
     position: relative;

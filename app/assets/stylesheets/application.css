@@ -1362,7 +1362,7 @@ blockquote p {
     background: transparent !important;
     color: black !important;
     /* Black prints faster: h5bp.com/s */
-  
+
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -5291,6 +5291,23 @@ footer p {
   display: inline-block;
   font-size: 1px;
 }
+.icon {
+  float: left;
+  margin-left: 20px;
+}
+.icon:hover {
+    opacity: 0.5;
+  -moz-opacity: 0.5;
+  -webkit-opacity: 0.5;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+  filter: alpha(opacity=50);
+  *zoom: 1;
+  transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+}
 /* Responsive Styles
 =====================================*/
 /* Setup For Screens 320px to 768px
@@ -5320,7 +5337,7 @@ footer p {
     width: auto;
   }
   #container #center {
-    margin-top: -20%;
+    margin-top: -20px;
   }
   #container #center h1 {
     font-size: 270%;
@@ -5342,6 +5359,9 @@ footer p {
     border-bottom: 60px solid transparent;
     border-left: 60px solid black;
     z-index: 100;
+  }
+  footer {
+      padding-bottom: 80px;
   }
   #share {
     position: relative;

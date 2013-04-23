@@ -94,12 +94,17 @@
             <a href="#apply" class="apply-toggle button radius">Apply</a>
         </div>
     </header>
-    
+
 <%= yield %>
 
     <footer>
         <div class="row">
-            <div class="large-12 columns">
+            <div class="large-6 columns">
+                <div class="icon"><%= link_to image_tag("fb.png", :size => "45x45"), "https://www.facebook.com/TedxRosslyn" %></div>
+                <div class="icon"><%= link_to image_tag("tw.png", :size => "45x45"), "https://twitter.com/TEDxRosslyn" %></div>
+            </div>
+            <div class="large-6 columns">
+                <br /><br />
                 <p class="text-center">Copyright &copy; Scott &amp; Nicholas (both Awesome)...!</p>
             </div>
         </div>
