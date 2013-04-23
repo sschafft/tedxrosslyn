@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @application.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @application.email %>
+</p>
+
+<p>
+  <b>Question1:</b>
+  <%= @application.question1 %>
+</p>
+
+<p>
+  <b>Question2:</b>
+  <%= @application.question2 %>
+</p>
+
+<p>
+  <b>Question3:</b>
+  <%= @application.question3 %>
+</p>
+
+<p>
+  <b>Question4:</b>
+  <%= @application.question4 %>
+</p>
+
+<p>
+  <b>Question5:</b>
+  <%= @application.question5 %>
+</p>
+
+<p>
+  <b>Twitter:</b>
+  <%= @application.twitter %>
+</p>
+
+<p>
+  <b>Bdate:</b>
+  <%= @application.bdate %>
+</p>
+
+
+<%= link_to 'Edit', edit_application_path(@application) %> |
+<%= link_to 'Back', applications_path %>

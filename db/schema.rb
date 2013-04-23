@@ -11,7 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130420225819) do
+ActiveRecord::Schema.define(:version => 20130423020609) do
+
+  create_table "applications", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "question1"
+    t.string   "question2"
+    t.string   "question3"
+    t.string   "question4"
+    t.string   "question5"
+    t.string   "twitter"
+    t.date     "bdate"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "partners", :force => true do |t|
     t.string   "name"
@@ -26,8 +40,10 @@ ActiveRecord::Schema.define(:version => 20130420225819) do
     t.string   "name"
     t.string   "bio"
     t.string   "link"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.string   "type"
+    t.string   "speaker_type"
   end
 
   create_table "talks", :force => true do |t|

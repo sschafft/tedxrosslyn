@@ -1,0 +1,53 @@
+<%= form_for(@application) do |f| %>
+  <% if @application.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@application.errors.count, "error") %> prohibited this application from being saved:</h2>
+
+      <ul>
+      <% @application.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :question1 %><br />
+    <%= f.text_field :question1 %>
+  </div>
+  <div class="field">
+    <%= f.label :question2 %><br />
+    <%= f.text_field :question2 %>
+  </div>
+  <div class="field">
+    <%= f.label :question3 %><br />
+    <%= f.text_field :question3 %>
+  </div>
+  <div class="field">
+    <%= f.label :question4 %><br />
+    <%= f.text_field :question4 %>
+  </div>
+  <div class="field">
+    <%= f.label :question5 %><br />
+    <%= f.text_field :question5 %>
+  </div>
+  <div class="field">
+    <%= f.label :twitter %><br />
+    <%= f.text_field :twitter %>
+  </div>
+  <div class="field">
+    <%= f.label :bdate %><br />
+    <%= f.date_select :bdate %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

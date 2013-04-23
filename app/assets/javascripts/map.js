@@ -96,6 +96,6 @@
       var marker = new google.maps.Marker({
           position: rosslyn,
           map: map,
-          title: 'Rosslyn Map!'
+          title: 'Rosslyn Map'
       });
     }

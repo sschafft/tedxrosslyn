@@ -26,12 +26,20 @@
         <div class="row">
             <h2 class="text-center">TEDxRosslyn</h2>
             <div class="large-6 columns">
-                <p>TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in California 25 years ago, TED has grown to support those world-changing ideas with multiple initiatives. The annual TED Conference invites the world's leading thinkers and doers to speak for 18 minutes. Their talks are then made available, free, at TED.com. TED speakers have included Bill Gates, Al Gore, Jane Goodall, Elizabeth Gilbert, Sir Richard Branson, Nandan Nilekani,Philippe Starck, Ngozi Okonjo-Iweala, Isabel Allende and UK Prime Minister Gordon Brown. The annual TED Conference takes place in Long Beach, California, with simulcast in Palm Springs; TEDGlobal is held each year in Oxford, UK. TED's media initiatives include TED.com, where new TEDTalks are posted daily, and the Open Translation Project, which provides subtitles and interactive transcripts as well as the ability for any TEDTalk to be translated by volunteers worldwide.</p>
-                <p>TED has established the annual TED Prize, where exceptional individuals with a wish to change the world are given the opportunity to put their wishes into action; TEDx, which offers individuals or groups a way to host local, self-organized events around the world, and the TEDFellows program, helping world-changing innovators from around the globe to become part of the TED community and, with its help, amplify the impact of their remarkable projects and activities.</p>
+                <h4> Introduction </h4>
+                <p>The introduction of TEDxRosslyn to the city heralds an ambitious vision that embraces action, ideas, and people to develop the Rosslyn story for the 21st century. This is an explicit effort to align our hometown with the mission of “ideas worth spreading”. 
+
+                TEDxRosslyn is a gathering of thought leaders and heads of industry that are using bold ideas and innovating methods to reshape our city and the rest of the world. Following the TED template, TEDxRosslyn fulfills its mission by creating dialogue and lasting connections. 
+
+                TEDxRosslyn will be a cumulation of in-person talks from amazing speakers, recorded videos from the official TED conference, and time and activities for the attendees to connect to each and hopefully create lasting relationships. </p>
             </div>
             <div class="large-6 columns">
-                <p>TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in California 25 years ago, TED has grown to support those world-changing ideas with multiple initiatives. The annual TED Conference invites the world's leading thinkers and doers to speak for 18 minutes. Their talks are then made available, free, at TED.com. TED speakers have included Bill Gates, Al Gore, Jane Goodall, Elizabeth Gilbert, Sir Richard Branson, Nandan Nilekani,Philippe Starck, Ngozi Okonjo-Iweala, Isabel Allende and UK Prime Minister Gordon Brown. The annual TED Conference takes place in Long Beach, California, with simulcast in Palm Springs; TEDGlobal is held each year in Oxford, UK. TED's media initiatives include TED.com, where new TEDTalks are posted daily, and the Open Translation Project, which provides subtitles and interactive transcripts as well as the ability for any TEDTalk to be translated by volunteers worldwide.</p>
-                <p>TED has established the annual TED Prize, where exceptional individuals with a wish to change the world are given the opportunity to put their wishes into action; TEDx, which offers individuals or groups a way to host local, self-organized events around the world, and the TEDFellows program, helping world-changing innovators from around the globe to become part of the TED community and, with its help, amplify the impact of their remarkable projects and activities.</p>
+                <h4>Theme</h4>
+                    <h5 class="subheader">TEDx Rosslyn: Imagining the Future</h5>
+                    <p>
+                    Today, innovation and technology are reshaping our city and our world. New leaders and thinkers are using emerging technologies and radical ideas to transform humanity and earth to a very different future than we could ever imagine. To encourage an active role in designing our collective futures, our speakers will include visionaries who are designing the future of science, technology, health, education – and are excited to share their ideas with our community. 
+
+                    The goal of TEDxRosslyn is to imagine the future possibilities of our city and of the world and what we can do to shape a bright and hopeful future. </p>
             </div>
             <hr>
         </div>
@@ -39,55 +47,17 @@
     <section id="speakers">
         <div class="row">
             <h2 class="text-center">Speakers</h2>
+            <% Speaker.all.each do |speaker| %> 
             <div class="large-3 columns">
+                <%= link_to speaker.link do %>
                 <div class="speakerimg"></div>
-                <h6>Firstname Lastname</h6>
-                <p>Speaker Type</p>
-                <small>TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in California 25 years ago, TED has grown to support those world-changing ideas with multiple initiatives. The annual TED Conference invites the world's leading thinkers and doers to speak for 18 minutes.</small>
+                <h6><%= speaker.name %></h6>
+                <% end %>
+                
+                <p><%= speaker.speaker_type %></p>
+                <small><%= speaker.bio %></small>
             </div>
-            <div class="large-3 columns">
-                <div class="speakerimg"></div>
-                <h6>Firstname Lastname</h6>
-                <p>Speaker Type</p>
-                <small>TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in California 25 years ago, TED has grown to support those world-changing ideas with multiple initiatives. The annual TED Conference invites the world's leading thinkers and doers to speak for 18 minutes.</small>
-            </div>
-            <div class="large-3 columns">
-                <div class="speakerimg"></div>
-                <h6>Firstname Lastname</h6>
-                <p>Speaker Type</p>
-                <small>TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in California 25 years ago, TED has grown to support those world-changing ideas with multiple initiatives. The annual TED Conference invites the world's leading thinkers and doers to speak for 18 minutes.</small>
-            </div>
-            <div class="large-3 columns">
-                <div class="speakerimg"></div>
-                <h6>Firstname Lastname</h6>
-                <p>Speaker Type</p>
-                <small>TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in California 25 years ago, TED has grown to support those world-changing ideas with multiple initiatives. The annual TED Conference invites the world's leading thinkers and doers to speak for 18 minutes.</small>
-            </div>
-            <hr class="divider">
-            <div class="large-3 columns">
-                <div class="speakerimg"></div>
-                <h6>Firstname Lastname</h6>
-                <p>Speaker Type</p>
-                <small>TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in California 25 years ago, TED has grown to support those world-changing ideas with multiple initiatives. The annual TED Conference invites the world's leading thinkers and doers to speak for 18 minutes.</small>
-            </div>
-            <div class="large-3 columns">
-                <div class="speakerimg"></div>
-                <h6>Firstname Lastname</h6>
-                <p>Speaker Type</p>
-                <small>TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in California 25 years ago, TED has grown to support those world-changing ideas with multiple initiatives. The annual TED Conference invites the world's leading thinkers and doers to speak for 18 minutes.</small>
-            </div>
-            <div class="large-3 columns">
-                <div class="speakerimg"></div>
-                <h6>Firstname Lastname</h6>
-                <p>Speaker Type</p>
-                <small>TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in California 25 years ago, TED has grown to support those world-changing ideas with multiple initiatives. The annual TED Conference invites the world's leading thinkers and doers to speak for 18 minutes.</small>
-            </div>
-            <div class="large-3 columns">
-                <div class="speakerimg"></div>
-                <h6>Firstname Lastname</h6>
-                <p>Speaker Type</p>
-                <small>TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in California 25 years ago, TED has grown to support those world-changing ideas with multiple initiatives. The annual TED Conference invites the world's leading thinkers and doers to speak for 18 minutes.</small>
-            </div>
+            <% end %>
             <hr>
         </div>
     </section>
@@ -97,51 +67,45 @@
             <div class="large-12 columns">
                 <h2 class="text-center">Partners</h2>
                 <p>TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in California 25 years ago, TED has grown to support those world-changing ideas with multiple initiatives. The annual TED Conference invites the world's leading thinkers and doers to speak for 18 minutes.</p>
-                <h4>Gold Partners</h4>
             </div>
-            <div class="large-4 columns">
-                <div class="partnerimg"></div>
-                <a href="#">www.someurl.com</a>
-            </div>
-            <div class="large-4 columns">
-                <div class="partnerimg"></div>
-                <a href="#">www.someurl.com</a>
-            </div>
-            <div class="large-4 columns">
-                <div class="partnerimg"></div>
-                <a href="#">www.someurl.com</a>
-            </div>
+            <% if partner = Partner.where("partners.category like '%Gold%'").first %>
+                <div class="large-12 columns">
+                    <h4><%= partner.category.titleize %> Partners</h4>
+                </div>
+            <% end %> 
+            <% Partner.where("partners.category like '%Gold%'").each do |partner| %> 
+                <div class="large-4 columns">
+                    <div class="partnerimg"></div>
+                    <%= link_to partner.url %>
+                </div>
+                <% end %>  
+
             <hr class="divider">
-            <div class="large-12 columns">
-                <h4>Silver Partners</h4>
-            </div>
-            <div class="large-4 columns">
-                <div class="partnerimg"></div>
-                <a href="#">www.someurl.com</a>
-            </div>
-            <div class="large-4 columns">
-                <div class="partnerimg"></div>
-                <a href="#">www.someurl.com</a>
-            </div>
-            <div class="large-4 columns">
-                <div class="partnerimg"></div>
-                <a href="#">www.someurl.com</a>
-            </div>
+
+            <% if partner = Partner.where("partners.category like '%Silver%'").first %>
+                <div class="large-12 columns">
+                    <h4><%= partner.category.titleize %> Partners</h4>
+                </div>
+            <% end %> 
+            <% Partner.where("partners.category like '%Silver%'").each do |partner| %> 
+                <div class="large-4 columns">
+                    <div class="partnerimg"></div>
+                <%= link_to partner.url %>
+                </div>
+            <% end %> 
+
             <hr class="divider">
-            <div class="large-12 columns">
-                <h4>Bronze Partners</h4>
-            </div>
-            <div class="large-4 columns">
-                <div class="partnerimg"></div>
-                <a href="#">www.someurl.com</a>
-            </div>
-            <div class="large-4 columns">
-                <div class="partnerimg"></div>
-                <a href="#">www.someurl.com</a>
-            </div>
-            <div class="large-4 columns">
-                <div class="partnerimg"></div>
-                <a href="#">www.someurl.com</a>
-            </div>
+
+            <% if partner = Partner.where("partners.category like '%Bronze%'").first %>
+                <div class="large-12 columns">
+                    <h4><%= partner.category.titleize %> Partners</h4>
+                </div>
+            <% end %> 
+            <% Partner.where("partners.category like '%Bronze%'").each do |partner| %> 
+                <div class="large-4 columns">
+                    <div class="partnerimg"></div>
+                <%= link_to partner.url %>
+                </div>
+            <% end %>   
         </div>
     </section>
