@@ -46,7 +46,7 @@ end
 
 # Use PG for production
 group :production do
-#  gem 'pg'
+ gem 'pg'
 end
 
 # Adds Google Analytics
