@@ -47,36 +47,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-    <div id="apply">
-        <div class="row">
-            <div class="large-12 columns">
-                <h1>Apply</h1>
-                <hr>
-            </div>
-        </div>
-        <div class="row">
-            <div class="large-6 columns">
-                <h3>Content</h3>
-                <p>At TEDxRosslyn, we combine world-class speakers with a world-class audience.</p>
-                <p>Join us in the audience by filling in the form. Once approved, you will receive an e-mail with a personalized link to purchase your entrance ticket online.</p>
-                <p>Due to the limited number of seats available, not all applications will be approved.</p>
-
-            </div>
-            <div class="large-6 columns">
-                <h3>Form</h3>
-                <label>Name</label>
-                <input type="text">
-                <small class="error">Don't forget to put your name!</small>
-                <label>Email Address</label>
-                <input type="email">
-                <small class="error">We need a real email to send you your ticket!</small>
-                <button type="submit" class="right button radius">Submit</button>
-            </div>
-        </div>
-        <a href="javascript:void(0);" class="apply-toggle closer">x</a>
-    </div>
+    <%= render 'home/apply_form' %>
     <div id="location">
-        <div id="map_canvas"></div>
+        <div><%= image_tag "map.jpg" %> </div>
         <a href="javascript:void(0);" class="location-toggle closer">x</a>
         <div id="address">
             <div class="row">
@@ -94,8 +67,12 @@
             <a href="#apply" class="apply-toggle button radius">Apply</a>
         </div>
     </header>
-    
-<%= yield %>
+
+    <% if content_for?(:main) %>
+      <%= yield(:main) %>
+    <% else %>
+        <%= yield %>
+    <% end %>
 
     <footer>
         <div class="row">
