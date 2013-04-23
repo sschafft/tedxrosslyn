@@ -80,9 +80,12 @@
         <a href="javascript:void(0);" class="location-toggle closer">x</a>
         <div id="address">
             <div class="row">
+                <%= link_to "https://plus.google.com/111078498157976610022/about?gl=us&hl=en", :target => '_blank' do %>
                 <div class="large-12 columns">
-                    <h6>1400 14th St N, Arlington, VA, 22209</h6>
+                    <h6>Top of the Town Conference Center</h6>
+                    <h6 class="subheader">1400 14th St N, Arlington, VA, 22209</h6>
                 </div>
+                <% end %>
             </div>
         </div>
     </div>
@@ -100,12 +103,12 @@
     <footer>
         <div class="row">
             <div class="large-6 columns">
-                <div class="icon"><%= link_to image_tag("fb.png", :size => "45x45"), "https://www.facebook.com/TedxRosslyn" %></div>
-                <div class="icon"><%= link_to image_tag("tw.png", :size => "45x45"), "https://twitter.com/TEDxRosslyn" %></div>
+                <div class="icon"><%= link_to image_tag("fb.png", :size => "45x45"), "https://www.facebook.com/TedxRosslyn", :target => "_blank" %></div>
+                <div class="icon"><%= link_to image_tag("tw.png", :size => "45x45"), "https://twitter.com/TEDxRosslyn", :target => "_blank" %></div>
             </div>
             <div class="large-6 columns">
                 <br /><br />
-                <p class="text-center">Copyright &copy; Scott &amp; Nicholas (both Awesome)...!</p>
+                <p class="text-center">Copyright &copy; Scott Schaffter &amp; Nicholas Kingston </p>
             </div>
         </div>
         </div>
