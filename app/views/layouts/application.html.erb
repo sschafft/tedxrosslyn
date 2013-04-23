@@ -42,31 +42,75 @@
     <!--[if IE]><meta content="IE=8" http-equiv="X-UA-Compatible"/><![endif]-->
     <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif] -->
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "jquery_slides" %>
 
   <%= csrf_meta_tags %>
-
-  <%= analytics_init if Rails.env.production? %>
 </head>
 <body>
+    <div id="apply">
+        <div class="row">
+            <div class="large-12 columns">
+                <h1>Apply</h1>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="large-6 columns">
+                <h3>Content</h3>
+                <p>At TEDxRosslyn, we combine world-class speakers with a world-class audience.</p>
+                <p>Join us in the audience by filling in the form. Once approved, you will receive an e-mail with a personalized link to purchase your entrance ticket online.</p>
+                <p>Due to the limited number of seats available, not all applications will be approved.</p>
 
+            </div>
+            <div class="large-6 columns">
+                <h3>Form</h3>
+                <label>Name</label>
+                <input type="text">
+                <small class="error">Don't forget to put your name!</small>
+                <label>Email Address</label>
+                <input type="email">
+                <small class="error">We need a real email to send you your ticket!</small>
+                <button type="submit" class="right button radius">Submit</button>
+            </div>
+        </div>
+        <a href="javascript:void(0);" class="apply-toggle closer">x</a>
+    </div>
+    <div id="location">
+        <div id="map_canvas"></div>
+        <a href="javascript:void(0);" class="location-toggle closer">x</a>
+        <div id="address">
+            <div class="row">
+                <div class="large-12 columns">
+                    <h6>1400 14th St N, Arlington, VA, 22209</h6>
+                </div>
+            </div>
+        </div>
+    </div>
     <header>
         <!-- TEDx Rosslyn Logo and link to homepage -->
         <%= link_to image_tag("logo.png", :size => "240x65"), root_path %>
+        <div id="mainlinks">
+            <a href="#location" class="location-toggle on button radius map">Location</a>
+            <a href="#apply" class="apply-toggle button radius">Apply</a>
+        </div>
     </header>
-
-    <div id="mainlinks">
-        <!-- Trigger GoogleMaps info to show up along with all other contact info -->
-        <a href="#" class="blockbtn">Location</a>
-
-        <!-- Hidden until day of event, then link to stream -->
-        <a href="#" class="blockbtn">Livestream</a>
-    </div>
-
+    
 <%= yield %>
 
+    <footer>
+        <div class="row">
+            <div class="large-12 columns">
+                <p class="text-center">Copyright &copy; Scott &amp; Nicholas (both Awesome)...!</p>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+  <!-- JS -->
+    <%= javascript_include_tag "jquery" %>
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?&sensor=false" %>
+    <%= javascript_include_tag "maps" %>
+    <%= javascript_include_tag "jquery_slides" %>
+    <%= javascript_include_tag "scripts" %>
 </body>
 </html>

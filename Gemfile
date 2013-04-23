@@ -15,14 +15,14 @@ group :assets do
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
-  # Foundation
-  gem 'zurb-foundation', '~> 4.0.0'
-  gem 'modernizr-rails', '~> 2.6.2'
+  # # Foundation
+  # gem 'zurb-foundation', '~> 4.0.0'
+  # gem 'modernizr-rails', '~> 2.6.2'
 
-  gem 'uglifier', '>= 1.0.3'
+  # gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+# gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -48,10 +48,6 @@ end
 group :production do
   gem 'pg'
 end
-
-# Installs mercury
-gem 'mercury-rails'
-gem 'paperclip'
 
 # Adds Google Analytics
 gem 'google-analytics-rails'
