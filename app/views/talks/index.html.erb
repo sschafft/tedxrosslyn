@@ -17,7 +17,7 @@
     <td><%= talk.url %></td>
     <td><%= link_to 'Show', talk %></td>
     <td><%= link_to 'Edit', edit_talk_path(talk) %></td>
-    <td><%= link_to 'Destroy', talk, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= button_to 'Destroy', talk, method: :delete, data: { confirm: 'Are you sure?' }, :class => "button radius" %></td>
   </tr>
 <% end %>
 </table>

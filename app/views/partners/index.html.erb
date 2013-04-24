@@ -19,7 +19,7 @@
     <td><%= partner.url %></td>
     <td><%= link_to 'Show', partner %></td>
     <td><%= link_to 'Edit', edit_partner_path(partner) %></td>
-    <td><%= link_to 'Destroy', partner, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= button_to 'Destroy', partner, method: :delete, data: { confirm: 'Are you sure?' }, :class => "button radius" %></td>
   </tr>
 <% end %>
 </table>

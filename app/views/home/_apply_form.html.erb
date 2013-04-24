@@ -1,4 +1,5 @@
- <div id="apply">
+<div id="apply">
+
         <div class="row">
             <div class="large-12 columns">
                 <h1>Apply</h1>
@@ -13,14 +14,19 @@
                 <p>Due to the limited number of seats available, not all applications will be approved.</p>
 
             </div>
+
             <div class="large-6 columns">
                 <h3>Form</h3>
-                <label>Name</label>
-                <input type="text">
-                <small class="error">Don't forget to put your name!</small>
-                <label>Email Address</label>
-                <input type="email">
-                <small class="error">We need a real email to send you your ticket!</small>
-                <button type="submit" class="right button radius">Submit</button>
+                <%= form_for Application.new, :validate => true do |f| %>
+                <%= f.label :name %>
+                <%= f.text_field :name %>
+                <% if flash[:name_error] %><small class="error">Don't forget to put your name!</small><% end %>
+                <%= f.label :email %>
+                <%= f.text_field :email %>
+                <% if flash[:email_error] %><small class="error">We need a real email to send you your ticket!</small><% end %>
+                <%= f.submit 'Submit', :class => "right button radius" %>
+                <% end %>
             </div>
         </div>
+        <a href="javascript:void(0);" class="apply-toggle closer">x</a>
+    </div>

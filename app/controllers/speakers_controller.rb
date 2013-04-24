@@ -1,5 +1,6 @@
 class SpeakersController < ApplicationController
   http_basic_authenticate_with :name => "tedx", :password => "2030"
+  layout "default"
 
   # GET /speakers
   # GET /speakers.json

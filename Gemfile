@@ -22,7 +22,9 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-# gem 'jquery-rails'
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -51,6 +53,15 @@ end
 
 # Adds Google Analytics
 gem 'google-analytics-rails'
+
+#Email validation
+gem 'valid_email'
+
+#Live validation
+gem 'client_side_validations'
+
+
+
 
 
 

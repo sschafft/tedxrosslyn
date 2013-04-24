@@ -10,7 +10,7 @@
     <th>Question4</th>
     <th>Question5</th>
     <th>Twitter</th>
-    <th>Bdate</th>
+    <th>Age</th>
     <th></th>
     <th></th>
     <th></th>
@@ -26,10 +26,10 @@
     <td><%= application.question4 %></td>
     <td><%= application.question5 %></td>
     <td><%= application.twitter %></td>
-    <td><%= application.bdate %></td>
+    <td><%= application.age %></td>
     <td><%= link_to 'Show', application %></td>
     <td><%= link_to 'Edit', edit_application_path(application) %></td>
-    <td><%= link_to 'Destroy', application, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= button_to 'Destroy', application, method: :delete, data: { confirm: 'Are you sure?' }, :class => "button radius" %></td>
   </tr>
 <% end %>
 </table>

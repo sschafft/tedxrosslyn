@@ -21,3 +21,8 @@ $(function() {
     }
   });
 });
+
+$(function() {
+  $('#application_bdate').datepicker
+    dateFormat: 'yy-mm-dd'
+    });

@@ -46,10 +46,16 @@ class ApplicationsController < ApplicationController
 
     respond_to do |format|
       if @application.save
-        format.html { redirect_to @application, notice: 'Application was successfully created.' }
+        format.html { redirect_to root_path }
         format.json { render json: @application, status: :created, location: @application }
       else
-        format.html { render action: "new" }
+        format.html {
+          render action: "new"
+          # @application.errors.full_messages.each do |msg|
+          # flash[:name_error] = 'true' if msg == "Name can't be blank"
+          # flash[:email_error] = 'true' if msg == "Email is invalid" 
+          # end
+        }
         format.json { render json: @application.errors, status: :unprocessable_entity }
       end
     end
@@ -62,7 +68,7 @@ class ApplicationsController < ApplicationController
 
     respond_to do |format|
       if @application.update_attributes(params[:application])
-        format.html { redirect_to @application, notice: 'Application was successfully updated.' }
+        format.html { redirect_to root_path, notice: 'Application was successfully submitted.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

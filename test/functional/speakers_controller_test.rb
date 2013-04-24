@@ -18,7 +18,7 @@ class SpeakersControllerTest < ActionController::TestCase
 
   test "should create speaker" do
     assert_difference('Speaker.count') do
-      post :create, speaker: { bio: @speaker.bio, link: @speaker.link, name: @speaker.name }
+      post :create, speaker: { bio: @speaker.bio, link: @speaker.link, name: @speaker.name, speaker_type: @speaker.speaker_type }
     end
 
     assert_redirected_to speaker_path(assigns(:speaker))
@@ -35,7 +35,7 @@ class SpeakersControllerTest < ActionController::TestCase
   end
 
   test "should update speaker" do
-    put :update, id: @speaker, speaker: { bio: @speaker.bio, link: @speaker.link, name: @speaker.name }
+    put :update, id: @speaker, speaker: { bio: @speaker.bio, link: @speaker.link, name: @speaker.name, speaker_type: @speaker.speaker_type }
     assert_redirected_to speaker_path(assigns(:speaker))
   end
 

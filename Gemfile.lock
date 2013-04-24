@@ -30,6 +30,7 @@ GEM
       multi_json (~> 1.0)
     arel (3.0.2)
     builder (3.0.4)
+    client_side_validations (3.2.5)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -44,6 +45,12 @@ GEM
     hike (1.2.2)
     i18n (0.6.4)
     journey (1.0.4)
+    jquery-rails (2.2.1)
+      railties (>= 3.0, < 5.0)
+      thor (>= 0.14, < 2.0)
+    jquery-ui-rails (4.0.2)
+      jquery-rails
+      railties (>= 3.1.0)
     json (1.7.7)
     mail (2.4.4)
       i18n (>= 0.4.0)
@@ -98,15 +105,22 @@ GEM
     uglifier (2.0.1)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
+    valid_email (0.0.4)
+      activemodel
+      mail
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  client_side_validations
   coffee-rails (~> 3.2.1)
   google-analytics-rails
+  jquery-rails
+  jquery-ui-rails
   pg
   rails (= 3.2.12)
   sass-rails (~> 3.2.3)
   sqlite3
   uglifier (>= 1.0.3)
+  valid_email

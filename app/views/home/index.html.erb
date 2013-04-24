@@ -44,6 +44,7 @@
             <hr>
         </div>
     </section>
+    <% if Speaker.all.first %>
     <section id="speakers">
         <div class="row">
             <h2 class="text-center">Speakers</h2>
@@ -61,6 +62,8 @@
             <hr>
         </div>
     </section>
+    <% end %>
+    <% if Partner.all.first %>
     <section id="partners">
 
         <div class="row">
@@ -109,3 +112,4 @@
             <% end %>   
         </div>
     </section>
+    <% end %>
