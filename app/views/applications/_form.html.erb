@@ -1,54 +1,125 @@
-<%= form_for @application, :validate => true  do |f| %>
-  <% if @application.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@application.errors.count, "error") %> prohibited this application from being saved:</h2>
+<div class="row panel radius">
+    <%= form_for @application, :validate => true  do |f| %>
 
-      <ul>
-      <% @application.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+      <h5 class="subheader">Please fill out the highlighted fields of your application</h5>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :question1, "What are you currently spending most of your time thinking about?" %><br />
-    <%= f.text_area :question1 %>
-  </div>
-  <div class="field">
-    <%= f.label :question2, "What's your biggest achievement?" %><br />
-    <%= f.text_field :question2 %>
-  </div>
-  <div class="field">
-    <%= f.label :question3, "How can you help the TEDxRosslyn Community?" %><br />
-    <%= f.text_area :question3 %>
-  </div>
-  <div class="field">
-    <%= f.label :question4, "Additional Comments?" %><br />
-    <%= f.text_area :question4 %>
-  </div>
-  <div class="field">
-    <%= f.label :question5, "Lastly, and most importantly: what do you think will be the most popular ice cream flavor in the future?" %><br />
-    <%= f.text_area :question5 %>
-  </div>
-  <div class="field">
-    <%= f.label :twitter %><br />
-    <%= f.text_field :twitter %>
-  </div>
-  <div class="field">
-    <%= f.label :age, "Age" %><br />
-    <%= f.text_field :age %>
-  </div>
-  <div>
-    <%= f.submit 'Apply' , :class => "button radius" %>
-    <%= link_to 'Back', :back %>
-  </div>
-<% end %>
+      <div class="field large-10 columns essay">
+        <div class="small-3 columns">
+          <label class="right inline tedx_red">Full Name </label>
+        </div>
+        <div class="small-9 columns">
+        <%= f.text_field :name, :class => "show_error", :placeholder => 'Full Name' %>
+          <% if @application.errors.any? %>
+            <% @application.errors.full_messages.each do |msg| %>
+              <%if msg == "Name can't be blank" %>
+                <small class="error">Don't forget to put your name!</small>
+              <% end %> 
+            <% end %>
+          <% end %>
+          </div>
+      </div>
+
+      <div class="field large-10 columns">
+        <div class="small-3 columns">
+          <label class="right inline tedx_red"> Email Address </label>
+        </div>
+        <div class="small-9 columns temp_hidden">
+          <%= f.text_field :email, :class => "show_error", :placeholder => 'Email Address' %>
+            <% if @application.errors.any? %>
+              <% @application.errors.full_messages.each do |msg| %>
+                <%if msg == "Email is invalid" %>
+                <small class="error hidden">We need a real email to send you your ticket!</small>
+                  <% end %> 
+              <% end %>
+            <% end %>
+        </div>
+      </div>
+
+      <div class="field large-10 columns">
+        <div class="small-3 columns">
+          <label class="right inline tedx_red"> Job Title </label>
+        </div>
+        <div class="small-4 columns left">
+          <%= f.text_field :job_title, :placeholder => 'Job Title', :class => "show_highlight"  %>
+        </div>
+
+      </div>
+
+      <div class="field large-10 columns">
+        <div class="small-3 columns">
+          <label class="right inline tedx_red"> Twitter </label>
+        </div>
+        <div class="small-3 columns left">
+          <%= f.text_field :twitter, :placeholder => '@twiter' %>
+        </div>
+      </div>
+
+      <div class="field large-10 columns">
+        <div class="small-3 columns">
+          <label class="right inline tedx_red"> Age </label>
+        </div>
+        <div class="small-3 columns left">
+          <%= f.text_field :age, :placeholder => 'Age', :class => "show_highlight"  %>
+        </div>
+      </div>
+
+        <div class="large-10 columns">
+           <div class="columns large-10 large-offset-1">
+            <label class="left inline tedx_red essay"> What are you currently spending most of your time thinking about? </label>
+          </div>
+          <div class="columns large-11">
+            <%= f.text_area :question1, :class => "show_highlight" %>
+          </div>
+        </div>
+
+        <div class="field large-10 columns">
+          <div class="columns large-10 large-offset-1">
+            <label class="left inline tedx_red essay"> What's your biggest achievement? </label>
+          </div>
+          <div class="columns large-11">
+          <%= f.text_area :question2, :class => "show_highlight" %>
+          </div>
+        </div>
+
+        <div class="field large-10 columns">
+          <div class="columns large-10 large-offset-1">
+            <label class="left inline tedx_red essay"> How can TEDxRosslyn help you? </label>
+          </div>
+          <div class="columns large-11">
+            <%= f.text_area :question6, :class => "show_highlight"   %>
+          </div>
+        </div>
+
+        <div class="field large-10 columns">
+          <div class="columns large-10 large-offset-1">
+            <label class="left inline tedx_red essay"> How can you help the TEDxRosslyn Community? </label>
+          </div>
+          <div class="columns large-11">
+            <%= f.text_area :question3, :class => "show_highlight" %>
+          </div>
+        </div>
+
+        <div class="field large-10 columns">
+          <div class="columns large-10 large-offset-1">
+            <label class="left inline tedx_red essay"> Additional Comments? </label>
+          </div>
+          <div class="columns large-11">
+            <%= f.text_area :question4, :class => "show_highlight" %>
+          </div>
+        </div>
+
+        <div class="field large-10 columns">
+          <div class="columns large-10 large-offset-1">
+            <label class="left inline tedx_red essay"> Lastly, and most importantly: what do you think will be the most popular ice cream flavor in the future? </label>
+          </div>
+          <div class="columns large-11">
+            <%= f.text_area :question5, :class => "show_highlight"   %>
+          </div>
+        </div>
+
+      <div class="field large-11 columns essay">
+        <%= f.submit 'Apply' , :class => "button radius" %>
+        <%= link_to 'Nevermind...', :back %>
+      </div>
+    <% end %>
+</div>

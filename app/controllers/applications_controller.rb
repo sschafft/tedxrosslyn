@@ -1,6 +1,15 @@
 class ApplicationsController < ApplicationController
-  http_basic_authenticate_with :name => "tedx", :password => "2030"
-  layout "default"
+  
+  before_filter :auth, :except => [:new, :create]
+
+  layout "default", :except => [:new, :create, :edit, :update]
+
+  def auth
+     authenticate_or_request_with_http_basic do |username, password|
+        username == "tedx" && password == "2030"
+      end
+  end
+
   # GET /applications
   # GET /applications.json
   def index
@@ -46,16 +55,16 @@ class ApplicationsController < ApplicationController
 
     respond_to do |format|
       if @application.save
-        format.html { redirect_to root_path }
+        format.html do 
+          redirect_to root_path 
+          flash[:application_success] = "true"
+        end
         format.json { render json: @application, status: :created, location: @application }
       else
-        format.html {
+        format.html do 
           render action: "new"
-          # @application.errors.full_messages.each do |msg|
-          # flash[:name_error] = 'true' if msg == "Name can't be blank"
-          # flash[:email_error] = 'true' if msg == "Email is invalid" 
-          # end
-        }
+          flash[:notice] = 'Looks like there are still some areas to be fixed' 
+          end 
         format.json { render json: @application.errors, status: :unprocessable_entity }
       end
     end

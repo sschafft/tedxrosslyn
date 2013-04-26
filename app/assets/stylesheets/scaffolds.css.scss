@@ -1,11 +1,25 @@
-#notice {
-  color: green;
+.field_with_errors .green {
+  background-color: green;
 }
 
-.field_with_errors {
-  padding: 2px;
-  background-color: red;
-  display: table;
+.field_with_errors .show_error {
+border-color: #c60f13;
+border-style: solid;
+border-width: 3px;
+}
+
+.field_with_errors .hidden {
+ display: block;
+}
+
+.temp_hidden .hidden {
+  display: none;
+}
+
+.field_with_errors .show_highlight {
+  border-color: #c60f13;
+  border-style: solid;
+  border-width: 3px;
 }
 
 #error_explanation {
@@ -29,4 +43,12 @@
     font-size: 12px;
     list-style: square;
   }
+}
+
+.tedx_red {
+  color: #ff2b06
+}
+
+.essay {
+  padding-top: 40px !important; 
 }

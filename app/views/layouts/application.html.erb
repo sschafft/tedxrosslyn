@@ -62,7 +62,9 @@
             </div>
         </div>
     </div>
+    
     <header>
+
         <!-- TEDx Rosslyn Logo and link to homepage -->
         <%= link_to image_tag("logo.png", :size => "240x65"), root_path %>
         <div id="mainlinks">
@@ -70,6 +72,9 @@
            <% if @home %> <a href="#apply" class="apply-toggle button radius">Apply</a> <% end %>
         </div>
     </header>
+    <% if flash[:application_success] %>
+        <div id="application_success" class="alert-box success" style="text-align:center;">Thank you! Application Successfully Recieved! </div>
+    <% end %> 
 
     <% if content_for?(:main) %>
         <%= yield(:main) %>
@@ -85,7 +90,7 @@
             </div>
             <div class="large-6 columns">
                 <br /><br />
-                <p class="text-center">Copyright &copy; Scott Schaffter &amp; Nicholas Kingston </p>
+                <p class="text-center">Copyright &copy; <a href="http://schaffters.com" target="_blank"> Scott Schaffter </a> &amp; <a href="http://nickingston.com" target="_blank">Nicholas Kingston</a> </p>
             </div>
         </div>
         </div>

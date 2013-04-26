@@ -1,36 +1,28 @@
 <h1>Listing applications</h1>
 
 <table>
-  <tr>
+    <tr>
     <th>Name</th>
     <th>Email</th>
-    <th>Question1</th>
-    <th>Question2</th>
-    <th>Question3</th>
-    <th>Question4</th>
-    <th>Question5</th>
     <th>Twitter</th>
+    <th>Job Title</th>
     <th>Age</th>
     <th></th>
     <th></th>
     <th></th>
-  </tr>
+    </tr>
 
-<% @applications.each do |application| %>
-  <tr>
+    <% @applications.each do |application| %>
+    <tr>
     <td><%= application.name %></td>
     <td><%= application.email %></td>
-    <td><%= application.question1 %></td>
-    <td><%= application.question2 %></td>
-    <td><%= application.question3 %></td>
-    <td><%= application.question4 %></td>
-    <td><%= application.question5 %></td>
     <td><%= application.twitter %></td>
+    <td><%= application.job_title %></td>
     <td><%= application.age %></td>
-    <td><%= link_to 'Show', application %></td>
-    <td><%= link_to 'Edit', edit_application_path(application) %></td>
+    <td><%= link_to 'Show', application, :class => "button radius success" %></td>
+    <td><%= link_to 'Edit', edit_application_path(application), :class => "button radius secondary" %></td>
     <td><%= button_to 'Destroy', application, method: :delete, data: { confirm: 'Are you sure?' }, :class => "button radius" %></td>
-  </tr>
+    </tr>
 <% end %>
 </table>
 

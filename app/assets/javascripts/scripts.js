@@ -26,3 +26,7 @@ $(function() {
   $('#application_bdate').datepicker
     dateFormat: 'yy-mm-dd'
     });
+
+setTimeout(function() {
+    $('#application_success').fadeOut('slow');
+}, 2000)

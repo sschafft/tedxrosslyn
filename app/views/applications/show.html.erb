@@ -1,50 +1,56 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @application.name %>
-</p>
+<h1 style="text-align:center;"><%= @application.name %>'s Application</h1>
 
 <p>
-  <b>Email:</b>
+  <h5 class="subheader">Email:</h5>
   <%= @application.email %>
 </p>
 
 <p>
-  <b>Question1:</b>
-  <%= @application.question1 %>
-</p>
-
-<p>
-  <b>Question2:</b>
-  <%= @application.question2 %>
-</p>
-
-<p>
-  <b>Question3:</b>
-  <%= @application.question3 %>
-</p>
-
-<p>
-  <b>Question4:</b>
-  <%= @application.question4 %>
-</p>
-
-<p>
-  <b>Question5:</b>
-  <%= @application.question5 %>
-</p>
-
-<p>
-  <b>Twitter:</b>
+  <h5 class="subheader">Twitter:</h5>
   <%= @application.twitter %>
 </p>
 
 <p>
-  <b>Age:</b>
+  <h5 class="subheader">Age:</h5>
   <%= @application.age %>
 </p>
 
+<p>
+  <h5 class="subheader">Job Title:</h5>
+  <%= @application.job_title %>
+</p>
+
+<p>
+  <h5 class="subheader">What are you currently spending most of your time thinking about?</h5>
+  <%= @application.question1 %>
+</p>
+
+<p>
+  <h5 class="subheader">What's your biggest achievement?</h5>
+  <%= @application.question2 %>
+</p>
+
+<p>
+  <h5 class="subheader">How can TEDxRosslyn help you?</h5>
+  <%= @application.question6 %>
+</p>
+
+<p>
+  <h5 class="subheader">How can you help the TEDxRosslyn Community?</h5>
+  <%= @application.question3 %>
+</p>
+
+<p>
+  <h5 class="subheader">Additional Comments?</h5>
+  <%= @application.question4 %>
+</p>
+
+<p>
+  <h5 class="subheader">Lastly, and most importantly: what do you think will be the most popular ice cream flavor in the future?</h5>
+  <%= @application.question5 %>
+</p>
 
 <%= link_to 'Edit', edit_application_path(@application) %> |
 <%= link_to 'Back', applications_path %>

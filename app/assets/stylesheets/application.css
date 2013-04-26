@@ -8,7 +8,6 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require jquery.ui.datepicker
  *= require_self
  *= require_tree
  */
@@ -2072,6 +2071,18 @@ small.error {
   background: #c60f13;
   color: white;
 }
+
+.form_success small,
+small.form_success {
+  display: block;
+  padding: 0.375em 0.25em;
+  margin-top: -1.3125em;
+  margin-bottom: 1em;
+  font-size: 0.75em;
+  font-weight: bold;
+  background: #9ec54a;
+  color: white;
+}
 /* Custom Checkbox and Radio Inputs */
 form.custom .custom {
   display: inline-block;
@@ -4057,6 +4068,7 @@ kbd {
 .panel h5.subheader,
 .panel h6.subheader {
   line-height: 1.4;
+  color: #6f6f6f;
 }
 .panel.callout {
   border-style: solid;
