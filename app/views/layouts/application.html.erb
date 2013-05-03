@@ -43,6 +43,10 @@
     <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif] -->
 
   <%= stylesheet_link_tag    "application", :media => "all" %>
+  
+  <!-- Analytics only on production -->
+   <%= analytics_init if Rails.env.production? %>
+
 
   <%= csrf_meta_tags %>
 </head>
