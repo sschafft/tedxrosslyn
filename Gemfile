@@ -60,6 +60,9 @@ gem 'valid_email'
 #Live validation
 gem 'client_side_validations'
 
+# Add new relic
+gem 'newrelic_rpm'
+
 
 
 
