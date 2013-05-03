@@ -5,7 +5,7 @@ Tedxrosslyn::Application.configure do
   config.cache_classes = true
 
   # Google Analytics
-  GA.tracker = "UA-40045413-1"
+  GA.tracker = "UA-40293549-1"
 
   # Full error reports are disabled and caching is turned on
   config.consider_all_requests_local       = false
