@@ -27,9 +27,6 @@
             </div>
             <hr>
 
-            
-
-
         </div>
     </section>
     <section id="event">
@@ -61,7 +58,7 @@
             <% Speaker.all.each do |speaker| %> 
             <div class="large-3 columns">
                 <%= link_to speaker.link do %>
-                <div class="speakerimg"></div>
+                <%= image_tag speaker.img_name, :class=> "speakerimg" %>
                 <h6><%= speaker.name %></h6>
                 <% end %>
                 
@@ -88,7 +85,7 @@
             <% end %> 
             <% Partner.where("partners.category like '%Gold%'").each do |partner| %> 
                 <div class="large-4 columns">
-                    <div class="partnerimg"></div>
+                    <%= image_tag partner.img_name, :class=> "partnerimg" %>
                     <%= link_to partner.url %>
                 </div>
                 <% end %>  
@@ -102,7 +99,7 @@
             <% end %> 
             <% Partner.where("partners.category like '%Silver%'").each do |partner| %> 
                 <div class="large-4 columns">
-                    <div class="partnerimg"></div>
+                    <%= image_tag partner.img_name, :class=> "partnerimg" %>
                 <%= link_to partner.url %>
                 </div>
             <% end %> 
@@ -116,7 +113,7 @@
             <% end %> 
             <% Partner.where("partners.category like '%Bronze%'").each do |partner| %> 
                 <div class="large-4 columns">
-                    <div class="partnerimg"></div>
+                    <%= image_tag partner.img_name, :class=> "partnerimg" %>
                 <%= link_to "Partner Link", partner.url %>
                 </div>
             <% end %>   
