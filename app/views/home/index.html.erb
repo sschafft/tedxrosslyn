@@ -63,7 +63,7 @@
                 <% end %>
                 
                 <p><%= speaker.speaker_type %></p>
-                <small><%= speaker.bio %></small>
+                <small><%= speaker.bio.html_safe %></small>
             </div>
             <% end %>
             <hr>
