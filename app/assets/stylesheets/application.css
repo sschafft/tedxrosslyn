@@ -5252,12 +5252,9 @@ section#speakers small {
   line-height: 1.5em;
   padding-bottom: 75px;
 }
-section#speakers h2 {
-    padding-bottom: 100px;
-}
 
-section#speakers {
-  padding-bottom: 100px;
+section#speakers div.speakers {
+  padding-top: 100px;
 }
 
 .clear {
