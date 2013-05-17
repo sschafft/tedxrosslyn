@@ -5249,9 +5249,13 @@ section#speakers p {
 }
 section#speakers small {
   font-weight: lighter;
+  line-height: 1.5em;
 }
 section#speakers h2 {
     padding-bottom: 100px;
+}
+.clear {
+    clear: both;
 }
 .hexagon {
 	width: 200px;
@@ -5288,6 +5292,7 @@ section#speakers h2 {
 
 .hexagon img {
     margin-top: -50px;
+    height: 220px;
 
 }
 section#speakers h6 {
