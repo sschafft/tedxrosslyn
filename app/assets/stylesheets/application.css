@@ -5250,6 +5250,7 @@ section#speakers p {
 section#speakers small {
   font-weight: lighter;
   line-height: 1.5em;
+  padding-bottom: 75px;
 }
 section#speakers h2 {
     padding-bottom: 100px;
