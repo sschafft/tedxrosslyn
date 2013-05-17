@@ -55,7 +55,7 @@
     <section id="speakers">
         <div class="row">
             <h2 class="text-center">Speakers</h2>
-            <% Speaker.all.each do |speaker| %>
+            <% Speaker.order('name').all.each do |speaker| %>
             <div class="large-3 columns">
                 <%= link_to speaker.link do %>
                     <div class="hexagon">
