@@ -5252,8 +5252,10 @@ section#speakers small {
 }
 section#speakers .speakerimg {
   position: relative;
-  width: 100%;
-  background: #cccccc;
+  width: 10em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
   margin-bottom: 20px;
   margin-top: 20px;
 }
@@ -5276,7 +5278,6 @@ section#partners small {
 section#partners .partnerimg {
   position: relative;
   width: 100%;
-  background: #cccccc;
   margin-bottom: 20px;
   margin-top: 20px;
 }
