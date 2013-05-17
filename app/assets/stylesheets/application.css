@@ -5250,14 +5250,48 @@ section#speakers p {
 section#speakers small {
   font-weight: lighter;
 }
-section#speakers .speakerimg {
-  position: relative;
-  width: 10em;
-  display: block;
-  margin-left: auto;
-  margin-right: auto; 
-  margin-bottom: 20px;
-  margin-top: 20px;
+section#speakers h2 {
+    padding-bottom: 100px;
+}
+.hexagon {
+	width: 200px;
+	height: 110px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+
+}
+.hexagon:before {
+	content: "";
+	position: absolute;
+	top: -50px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 100px solid white;
+	border-right: 100px solid white;
+	border-bottom: 50px solid transparent;
+	overflow: hidden;
+}
+.hexagon:after {
+	content: "";
+	position: absolute;
+	bottom: -50px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 100px solid white;
+	border-right: 100px solid white;
+	border-top: 50px solid transparent;
+	overflow: hidden;
+}
+
+.hexagon img {
+    margin-top: -50px;
+
+}
+section#speakers h6 {
+    margin-top: 70px;
 }
 section#partners {
   margin-bottom: 50px;

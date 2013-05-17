@@ -34,9 +34,9 @@
             <h2 class="text-center">TEDxRosslyn</h2>
             <div class="large-6 columns">
                 <h4> Introduction </h4>
-                <p>The introduction of TEDxRosslyn to the city heralds an ambitious vision that embraces action, ideas, and people to develop the Rosslyn story for the 21st century. This is an explicit effort to align our hometown with the mission of “ideas worth spreading”. 
+                <p>The introduction of TEDxRosslyn to the city heralds an ambitious vision that embraces action, ideas, and people to develop the Rosslyn story for the 21st century. This is an explicit effort to align our hometown with the mission of “ideas worth spreading”.
 
-                TEDxRosslyn is a gathering of thought leaders and heads of industry that are using bold ideas and innovating methods to reshape our city and the rest of the world. Following the TED template, TEDxRosslyn fulfills its mission by creating dialogue and lasting connections. 
+                TEDxRosslyn is a gathering of thought leaders and heads of industry that are using bold ideas and innovating methods to reshape our city and the rest of the world. Following the TED template, TEDxRosslyn fulfills its mission by creating dialogue and lasting connections.
 
                 TEDxRosslyn will be a cumulation of in-person talks from amazing speakers, recorded videos from the official TED conference, and time and activities for the attendees to connect to each and hopefully create lasting relationships. </p>
             </div>
@@ -44,7 +44,7 @@
                 <h4>Theme</h4>
                     <h5 class="subheader">TEDx Rosslyn: Imagining the Future</h5>
                     <p>
-                    Today, innovation and technology are reshaping our city and our world. New leaders and thinkers are using emerging technologies and radical ideas to transform humanity and earth to a very different future than we could ever imagine. To encourage an active role in designing our collective futures, our speakers will include visionaries who are designing the future of science, technology, health, education – and are excited to share their ideas with our community. 
+                    Today, innovation and technology are reshaping our city and our world. New leaders and thinkers are using emerging technologies and radical ideas to transform humanity and earth to a very different future than we could ever imagine. To encourage an active role in designing our collective futures, our speakers will include visionaries who are designing the future of science, technology, health, education – and are excited to share their ideas with our community.
 
                     The goal of TEDxRosslyn is to imagine the future possibilities of our city and of the world and what we can do to shape a bright and hopeful future. </p>
             </div>
@@ -55,16 +55,19 @@
     <section id="speakers">
         <div class="row">
             <h2 class="text-center">Speakers</h2>
-            <% Speaker.all.each do |speaker| %> 
+            <% Speaker.all.each do |speaker| %>
             <div class="large-3 columns">
                 <%= link_to speaker.link do %>
-                <%= image_tag speaker.img_name, :class=> "speakerimg" %>
+                    <div class="hexagon">
+                    <%= image_tag speaker.img_name, :class=> "speakerimg" %>
+                    </div>
                 <h6><%= speaker.name %></h6>
                 <% end %>
-                
+
                 <p><%= speaker.speaker_type %></p>
                 <small><%= speaker.bio.html_safe %></small>
             </div>
+            <div class="clear"></div>
             <% end %>
             <hr>
         </div>
@@ -82,13 +85,13 @@
                 <div class="large-12 columns">
                     <h4><%= partner.category.titleize %> Partners</h4>
                 </div>
-            <% end %> 
-            <% Partner.where("partners.category like '%Gold%'").each do |partner| %> 
+            <% end %>
+            <% Partner.where("partners.category like '%Gold%'").each do |partner| %>
                 <div class="large-4 columns">
                     <%= image_tag partner.img_name, :class=> "partnerimg" %>
                     <%= link_to partner.url %>
                 </div>
-                <% end %>  
+                <% end %>
 
             <hr class="divider">
 
@@ -96,13 +99,13 @@
                 <div class="large-12 columns">
                     <h4><%= partner.category.titleize %> Partners</h4>
                 </div>
-            <% end %> 
-            <% Partner.where("partners.category like '%Silver%'").each do |partner| %> 
+            <% end %>
+            <% Partner.where("partners.category like '%Silver%'").each do |partner| %>
                 <div class="large-4 columns">
                     <%= image_tag partner.img_name, :class=> "partnerimg" %>
                 <%= link_to partner.url %>
                 </div>
-            <% end %> 
+            <% end %>
 
             <hr class="divider">
 
@@ -110,13 +113,13 @@
                 <div class="large-12 columns">
                     <h4><%= partner.category.titleize %> Partners</h4>
                 </div>
-            <% end %> 
-            <% Partner.where("partners.category like '%Bronze%'").each do |partner| %> 
+            <% end %>
+            <% Partner.where("partners.category like '%Bronze%'").each do |partner| %>
                 <div class="large-4 columns">
                     <%= image_tag partner.img_name, :class=> "partnerimg" %>
                 <%= link_to "Partner Link", partner.url %>
                 </div>
-            <% end %>   
+            <% end %>
         </div>
     </section>
     <% end %>
