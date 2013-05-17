@@ -47,9 +47,9 @@ group :development, :test do
 end
 
 # Use PG for production
-# group :production do
-# gem 'pg'
-# end
+group :production do
+gem 'pg'
+end
 
 # Adds Google Analytics
 gem 'google-analytics-rails'
