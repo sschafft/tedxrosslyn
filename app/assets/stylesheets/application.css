@@ -5268,8 +5268,8 @@ section#speakers h2 {
 	left: 0;
 	width: 0;
 	height: 0;
-	border-left: 100px solid white;
-	border-right: 100px solid white;
+	border-left: 100px solid #fafafa;
+	border-right: 100px solid #fafafa;
 	border-bottom: 50px solid transparent;
 	overflow: hidden;
 }
@@ -5280,8 +5280,8 @@ section#speakers h2 {
 	left: 0;
 	width: 0;
 	height: 0;
-	border-left: 100px solid white;
-	border-right: 100px solid white;
+	border-left: 100px solid #fafafa;
+	border-right: 100px solid #fafafa;
 	border-top: 50px solid transparent;
 	overflow: hidden;
 }
