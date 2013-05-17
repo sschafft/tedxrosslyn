@@ -5255,6 +5255,11 @@ section#speakers small {
 section#speakers h2 {
     padding-bottom: 100px;
 }
+
+section#speakers {
+  padding-bottom: 100px;
+}
+
 .clear {
     clear: both;
 }
@@ -5300,7 +5305,7 @@ section#speakers h6 {
     margin-top: 70px;
 }
 section#partners {
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 section#partners a {
   padding: 0;
