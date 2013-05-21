@@ -58,12 +58,19 @@
             <% @i=0 %>
             <% Speaker.order('name').all.each do |speaker| %>
             <% @i+=1 %> 
-            <div class="large-3 columns speakers ">
-                <%= link_to speaker.link do %>
+            <div class="large-3 columns speakers ">  
+                <% if speaker.link.present? %>
+                    <%= link_to speaker.link do %>
+                        <div class="hexagon">
+                        <%= image_tag speaker.img_name, :class=> "speakerimg" %>
+                        </div>
+                    <h6><%= speaker.name %></h6>
+                    <% end %>
+                 <% else %>   
                     <div class="hexagon">
-                    <%= image_tag speaker.img_name, :class=> "speakerimg" %>
+                        <%= image_tag speaker.img_name, :class=> "speakerimg" %>
                     </div>
-                <h6><%= speaker.name %></h6>
+                    <h6><%= speaker.name %></h6>
                 <% end %>
 
                 <p><%= speaker.speaker_type %></p>
