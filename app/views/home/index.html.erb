@@ -94,7 +94,7 @@
                 <p>TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in California 25 years ago, TED has grown to support those world-changing ideas with multiple initiatives. The annual TED Conference invites the world's leading thinkers and doers to speak for 18 minutes.</p>
             </div>
             <br />
-            <% Partner.where("partners.category NOT NULL").each do |partner| %>
+            <% Partner.each do |partner| %>
                 <div class="large-4 columns partners">
                     <div class="hexagon">
                    <%= link_to partner.url do %> <%= image_tag partner.img_name, :class=> "speakerimg" %> <% end %>  
