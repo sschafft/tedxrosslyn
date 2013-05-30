@@ -5244,7 +5244,7 @@ section hr.divider {
 }
 section#speakers p {
   padding: 0;
-  line-height: 0;
+  /*line-height: 0;*/
   font-size: 80%;
 }
 section#speakers small {
