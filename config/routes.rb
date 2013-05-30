@@ -7,6 +7,8 @@ Tedxrosslyn::Application.routes.draw do
 
   resources :speakers
 
+  match '/livestream' => "home#livestream", :as => "livestream"
+
   get "home/index"
 
   # You can have the root of your site routed with "root"

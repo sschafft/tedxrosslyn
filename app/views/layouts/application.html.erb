@@ -74,6 +74,7 @@
         <div id="mainlinks">
             <a href="#location" class="location-toggle on button radius map">Location</a>
            <% if @home %> <a href="http://tedxrosslyn.eventbrite.com/" class="button radius" target="_blank">Attend</a> <% end %>
+           <% if @home %> <a href="/livestream" class="button radius" data-reveal-id="myModal">Live Stream</a> <% end %>
         </div>
     </header>
     <% if flash[:application_success] %>
@@ -99,6 +100,15 @@
         </div>
         </div>
     </footer>
+
+
+
+    <div id="myModal" class="reveal-modal">
+  <h2>Awesome. I have it.</h2>
+  <p class="lead">Your couch.  It is mine.</p>
+  <p>Im a cool paragraph that lives inside of an even cooler modal. Wins</p>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
 
   <!-- JS -->
     <%= javascript_include_tag "jquery" %>
