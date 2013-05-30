@@ -5304,6 +5304,12 @@ section#speakers h6 {
 section#partners {
   margin-bottom: 100px;
 }
+
+section#partners .partners{
+  padding-top:50px;
+  padding-bottom:50px;
+}
+
 section#partners a {
   padding: 0;
   line-height: 0;
@@ -5319,7 +5325,8 @@ section#partners small {
 }
 section#partners .partnerimg {
   position: relative;
-  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 20px;
   margin-top: 20px;
 }
